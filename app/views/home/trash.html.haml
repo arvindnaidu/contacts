@@ -1,0 +1,46 @@
+%ul.media-list
+  - @contacts.each do |contact|
+    %li.media.contact-card.list-view.mgt-0.pdt-10
+      .media-left
+        %a{:href => ""}
+          %img.media-object{:alt => "...", :src => image_path("yeoman.png")}
+      .media-body
+        .row.mgl-0
+          .row
+            .col-md-8
+              .media-heading.card-title
+                %a{:href => contact_path(contact.id)}
+                  = contact.name
+            .col-md-4.pdr-30.text-align-r
+              %a.title-label.mgr-10.clickable{:href => contact_path(contact)} View
+              %a.title-label.mgr-10.clickable{:href => edit_contact_path(contact)} Edit
+              %a.title-label.clickable.delete-contact{:href => contact_path(contact)} Delete
+          .row
+            .col-md-5
+              .entry
+                %strong.key-name Email:
+                .key-value{:title => "#{contact.email}"}
+                  = contact.email
+              .entry
+                %strong.key-name Mobile:
+                .key-value= contact.mobile
+            .col-md-5
+              .entry
+                %strong.key-name Date of Birth:
+                .key-value= contact.dob
+              .entry
+                %strong.key-name Notes:
+                .key-value 21
+            .col-md-2
+            .row.float-left.pdl-30
+              .entry
+                %strong.key-name Address:
+                .key-value Manikonda, Hyderabad, Telangana - 500089, India
+
+- content_for :right_sidebar do
+  .spotlight.info{:role => 'alert'}
+    %h4 Heads up!
+    .content
+      This alert needs your attention, but it's not super important.<br/>
+      This alert needs your attention, but it's not super important.
+      This alert needs your attention, but it's not super important.

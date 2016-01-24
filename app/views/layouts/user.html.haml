@@ -1,0 +1,22 @@
+!!! 5
+%html
+  %head
+    = csrf_meta_tags
+    %link{:rel=>"icon", :type=>"image/png", :href=>"/favicon.png"}
+    %title My Contacts
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    .row.body-layout-container.mglr-0
+      .top-alerts-container.hidden
+        = render 'shared/top_alert'
+      .header-container
+        = render 'layouts/user_header'
+      .body-container.col-md-offset-1.col-md-10
+        .content-container
+          .main-content.col-md-9
+            = yield
+          .right-sidebar.col-md-3
+            = content_for :right_sidebar
+      .footer-container
+        = render 'shared/user_footer'

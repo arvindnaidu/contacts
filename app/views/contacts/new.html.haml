@@ -1,0 +1,11 @@
+%h4.title-label Create new contact
+%hr
+= render 'contact_form', form_post_method: 'post', target_url: contacts_path
+
+- content_for :right_sidebar do
+  .spotlight.info{:role => 'alert'}
+    %h4 Heads up!
+    .content
+      This alert needs your attention, but it's not super important.<br/>
+      This alert needs your attention, but it's not super important.
+      This alert needs your attention, but it's not super important.

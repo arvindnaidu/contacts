@@ -1,0 +1,12 @@
+- if flash.notice
+  .alert.alert-info= flash.notice
+
+%h3= "Welcome! " + @current_user.name
+
+- content_for :right_sidebar do
+  .spotlight.info{:role => 'alert'}
+    %h4 Heads up!
+    .content
+      This alert needs your attention, but it's not super important.<br/>
+      This alert needs your attention, but it's not super important.
+      This alert needs your attention, but it's not super important.

@@ -1,0 +1,22 @@
+.header.row
+  .navbar.navbar-default{:role => "navigation"}
+    .row.main-header-tabs-panel
+      .col-md-1
+      .col-md-10
+        .container-fluid
+          .navbar-header
+            %a.navbar-brand{:href => "/"} MyContacts
+          #js-navbar-collapse.collapse.navbar-collapse
+            %ul.nav.navbar-nav
+              %li.main-tab
+                %a{:href => "/"} Home
+              %li.main-tab
+                %a{:href => "#/about"} About
+            %ul.nav.navbar-nav.navbar-right
+              %li.main-tab
+                %a{:href => "#/pricing_details"} Pricing
+              %li.main-tab
+                %a{:href => "#/blog"} Blog
+              %li.main-tab
+                %a{:href => "#/how_it_works"} How it works
+      .col-md-1

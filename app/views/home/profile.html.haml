@@ -1,0 +1,62 @@
+- if flash.notice.present?
+  .alert.alert-info= flash.notice
+%h4.title-label= @current_user.name + "'s profile"
+%hr
+= form_tag account_path(@current_user), {:method => "PUT", :class => "form-horizontal", :role => "form", :id => "account_profile_form"} do
+  .form-group
+    %label.control-label.col-md-2{:for => "name"} Name:
+    .col-md-6
+      %input#pwd.form-control{:placeholder => "Enter name", :type => "text", :name => "account[name]", :value => @current_user.name}
+  .form-group
+    %label.control-label.col-md-2{:for => "email"} Email:
+    .col-md-6
+      %input#email.form-control{:placeholder => "Enter email", :type => "email", :name => "account[email]", :value => @current_user.email}
+  .form-group
+    %label.control-label.col-md-2{:for => "mobile"} Mobile:
+    .col-md-6
+      %input#pwd.form-control{:placeholder => "Enter mobile number", :type => "text", :name => "account[mobile]", :value => @current_user.mobile}
+  .form-group
+    %label.control-label.col-md-2{:for => "dob"} Date of Birth:
+    .col-md-6
+      %input#pwd.form-control{:placeholder => "Enter date of birth", :type => "text", :name => "account[dob]", :value => @current_user.dob}
+  .form-group
+    %label.control-label.col-md-2{:for => "gender"} Gender:
+    .col-md-6
+      .checkbox
+        %label.pdl-0
+          %input{:type => "radio", :name => "account[gender]", :value => "1", :checked => (@current_user.gender ? true : nil)} &nbsp; Male
+        %label
+          %input{:type => "radio", :name => "account[gender]", :value => "0", :checked => (@current_user.gender ? nil : true)} &nbsp; Female
+
+  %h4.title-label Address
+  %hr
+  .form-group
+    %label.control-label.col-md-2{:for => "city"} City:
+    .col-md-6
+      %input#pwd.form-control{:placeholder => "Enter city", :type => "text", :name => "account[city]", :value => @current_user.city}
+  .form-group
+    %label.control-label.col-md-2{:for => "state"} State:
+    .col-md-6
+      %input#pwd.form-control{:placeholder => "Enter state", :type => "text", :name => "account[state]", :value => @current_user.state}
+  .form-group
+    %label.control-label.col-md-2{:for => "country"} Country:
+    .col-md-6
+      %input#pwd.form-control{:placeholder => "Enter country", :type => "text", :name => "account[country]", :value => @current_user.country}
+  .form-group
+    %label.control-label.col-md-2{:for => "zip"} Zip:
+    .col-md-6
+      %input#pwd.form-control{:placeholder => "Enter zip", :type => "text", :name => "account[zip]", :value => @current_user.zip}
+  %hr
+  .form-group
+    .col-md-offset-2.col-md-10
+      %button.btn.btn-default.save{:type => 'submit'} Save
+      &nbsp;
+      %button.btn.btn-default.cancel Cancel
+
+- content_for :right_sidebar do
+  .spotlight.info{:role => 'alert'}
+    %h4 Heads up!
+    .content
+      This alert needs your attention, but it's not super important.<br/>
+      This alert needs your attention, but it's not super important.
+      This alert needs your attention, but it's not super important.

@@ -1,0 +1,82 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/assets/stylesheets/application.css	/^ * Any CSS and SCSS file within this directory, lib\/assets\/stylesheets, vendor\/assets\/stylesheets,$/;"	function	line:5
+ApplicationController	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+ApplicationHelper	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	module	line:1
+Contacts	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/application.rb	/^module Contacts$/;"	module	line:9
+Application	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/application.rb	/^  class Application < Rails::Application$/;"	class	line:10	class:Contacts
+default	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^default: &default$/;"	function	line:12
+adapter	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  adapter: mysql2$/;"	function	line:13
+encoding	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  encoding: utf8$/;"	function	line:14
+pool	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  pool: 5$/;"	function	line:15
+username	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  username: root$/;"	function	line:16
+password	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  password:$/;"	function	line:17
+host	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  host: localhost$/;"	function	line:18
+development	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^development:$/;"	function	line:20
+database	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  database: contacts_development$/;"	function	line:22
+test	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^test:$/;"	function	line:27
+database	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  database: contacts_test$/;"	function	line:29
+production	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^production:$/;"	function	line:50
+database	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  database: contacts_production$/;"	function	line:52
+username	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  username: contacts$/;"	function	line:53
+password	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/database.yml	/^  password: <%= ENV['CONTACTS_DATABASE_PASSWORD'] %>$/;"	function	line:54
+en	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/locales/en.yml	/^en:$/;"	function	line:22
+hello	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/locales/en.yml	/^  hello: "Hello world"$/;"	function	line:23
+development	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/secrets.yml	/^development:$/;"	function	line:13
+secret_key_base	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/secrets.yml	/^  secret_key_base: 0706efdd12786a46e139dc9417c360f9b03bb60d2287b83abb3efd3ee723312b287e22bf417245e1cf1977b7434039c312478a11ab5015ad64827b94d29f4b8a$/;"	function	line:14
+test	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/secrets.yml	/^test:$/;"	function	line:16
+secret_key_base	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/secrets.yml	/^  secret_key_base: d7b757b813e3f3ba5ae7a76dcfd19917d8ed7c4c1cf0764d8be6d56e8a6b47a7e5dbd2e816b0b478552371df28082b6b06e2404e99b971bab5650c8506ac0829$/;"	function	line:17
+production	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/secrets.yml	/^production:$/;"	function	line:21
+secret_key_base	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/config/secrets.yml	/^  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>$/;"	function	line:22
+html	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^<html>$/;"	function	line:2
+head	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^<head>$/;"	function	line:3
+title	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^  <title>The page you were looking for doesn't exist (404)<\/title>$/;"	function	line:4
+meta	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^  <meta name="viewport" content="width=device-width,initial-scale=1">$/;"	function	line:5
+style	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^  <style>$/;"	function	line:6
+body	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^<body>$/;"	function	line:57
+div	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^  <div class="dialog">$/;"	function	line:59
+div	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^    <div>$/;"	function	line:60
+h	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^      <h1>The page you were looking for doesn't exist.<\/h1>$/;"	function	line:61
+p	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^      <p>You may have mistyped the address or the page may have moved.<\/p>$/;"	function	line:62
+p	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/404.html	/^    <p>If you are the application owner check the logs for more information.<\/p>$/;"	function	line:64
+html	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^<html>$/;"	function	line:2
+head	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^<head>$/;"	function	line:3
+title	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^  <title>The change you wanted was rejected (422)<\/title>$/;"	function	line:4
+meta	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^  <meta name="viewport" content="width=device-width,initial-scale=1">$/;"	function	line:5
+style	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^  <style>$/;"	function	line:6
+body	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^<body>$/;"	function	line:57
+div	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^  <div class="dialog">$/;"	function	line:59
+div	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^    <div>$/;"	function	line:60
+h	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^      <h1>The change you wanted was rejected.<\/h1>$/;"	function	line:61
+p	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^      <p>Maybe you tried to change something you didn't have access to.<\/p>$/;"	function	line:62
+p	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/422.html	/^    <p>If you are the application owner check the logs for more information.<\/p>$/;"	function	line:64
+html	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^<html>$/;"	function	line:2
+head	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^<head>$/;"	function	line:3
+title	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^  <title>We're sorry, but something went wrong (500)<\/title>$/;"	function	line:4
+meta	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^  <meta name="viewport" content="width=device-width,initial-scale=1">$/;"	function	line:5
+style	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^  <style>$/;"	function	line:6
+body	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^<body>$/;"	function	line:57
+div	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^  <div class="dialog">$/;"	function	line:59
+div	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^    <div>$/;"	function	line:60
+h	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^      <h1>We're sorry, but something went wrong.<\/h1>$/;"	function	line:61
+p	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/public/500.html	/^    <p>If you are the application owner check the logs for more information.<\/p>$/;"	function	line:63
+ActiveSupport	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	class	line:5
+VisitorsController	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/visitors_controller.rb	/^class VisitorsController < ApplicationController$/;"	class	line:1
+welcome	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/visitors_controller.rb	/^	def welcome$/;"	method	line:4	class:VisitorsController
+signup	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/visitors_controller.rb	/^  def signup$/;"	method	line:8	class:VisitorsController
+create	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/visitors_controller.rb	/^  def create$/;"	method	line:12	class:VisitorsController
+login	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/visitors_controller.rb	/^  def login$/;"	method	line:17	class:VisitorsController
+account_params	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/visitors_controller.rb	/^  def account_params$/;"	method	line:26	class:VisitorsController
+ContactsController	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^class ContactsController < ApplicationController$/;"	class	line:1
+index	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^	def index$/;"	method	line:4	class:ContactsController
+show	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^	def show$/;"	method	line:10	class:ContactsController
+new	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^	def new$/;"	method	line:14	class:ContactsController
+create	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^	def create$/;"	method	line:18	class:ContactsController
+edit	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^  def edit$/;"	method	line:23	class:ContactsController
+update	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^	def update$/;"	method	line:27	class:ContactsController
+destroy	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^	def destroy$/;"	method	line:33	class:ContactsController
+confirm_contact_fields	/Users/arvind/MySpace/AngularProjects/RailsProjects/contacts/app/controllers/contacts_controller.rb	/^  def confirm_contact_fields$/;"	method	line:43	class:ContactsController

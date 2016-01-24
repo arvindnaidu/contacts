@@ -1,0 +1,46 @@
+.row
+  .col-md-offset-1.col-md-10
+    .row
+      .col-md-offset-1.col-md-8
+        .row
+          %h4.title-label Register here
+          %hr
+          = form_tag visitors_path, {:method => 'post', :class => "form-horizontal", :role => "form"} do
+            .form-group
+              %label.control-label.col-md-2{:for => "name"} Name:
+              .col-md-6
+                %input#pwd.form-control{:placeholder => "Enter name", :type => "text", :name => "account[name]"}
+            .form-group
+              %label.control-label.col-md-2{:for => "email"} Email:
+              .col-md-6
+                %input#email.form-control{:placeholder => "Enter email", :type => "email", :name => "account[email]"}
+            .form-group
+              %label.control-label.col-md-2{:for => "password"} Password:
+              .col-md-6
+                %input#email.form-control{:placeholder => "Enter password", :type => "password", :name => "account[password]"}
+            .form-group
+              %label.control-label.col-md-2{:for => "gender"} Gender:
+              .col-md-6
+                .checkbox
+                  %label.pdl-0
+                    %input{:type => "radio", :name => "account[gender]", :value => "1"} &nbsp; Male
+                  %label
+                    %input{:type => "radio", :name => "account[gender]", :value => "0"} &nbsp; Female
+
+            %hr
+            .form-group
+              .col-md-offset-2.col-md-10
+                %button.btn.btn-default.save{:type => 'submit'} Save
+                &nbsp;
+                %button.btn.btn-default.cancel Cancel
+      .col-md-3.right-sidebar
+        .row
+          .col-md-9.pdlr-0
+            .spotlight.info{:role => 'alert'}
+              %h4 Heads up!
+              .content
+                This alert needs your attention, but it's not super important.<br/>
+                This alert needs your attention, but it's not super important.
+                This alert needs your attention, but it's not super important.
+          .col-md-3
+  .col-md-1

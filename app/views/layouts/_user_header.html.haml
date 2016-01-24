@@ -1,0 +1,54 @@
+.col-md-offset-1.col-md-10
+  .navbar-header
+    %a.navbar-brand{:href => "/home"} MyContacts
+  #js-navbar-collapse.collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li.main-tab{:class => "#{'active' if @active_tab.nil?}"}
+        %a{:href => "/home"} Home
+      %li.main-tab{:class => "#{'active' if @active_tab == :contacts}"}
+        %a{:href => "/contacts"} Contacts
+    %ul.nav.navbar-nav.navbar-right
+      %li.main-tab
+        %a{:href => "#/blog"} Blog
+      %li
+        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+          Notifications
+          %span.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href => ""} Notification from XYX
+          %li
+            %a{:href => ""} Notification about ABC
+          %li
+            %a{:href => ""} Notification from Contacts
+          %li.divider{:role => "separator"}
+          %li
+            %a{:href => ""} Go to Inbox
+      %li
+        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+          Messages
+          %span.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href => ""} Message from XYX
+          %li
+            %a{:href => ""} Message about ABC
+          %li
+            %a{:href => ""} Message from Contacts
+          %li.divider{:role => "separator"}
+          %li
+            %a{:href => ""} Go to Inbox
+      %li.dropdown
+        %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :role => "button"}
+          = @current_user.name
+          %span.caret
+        %ul.dropdown-menu
+          %li
+            %a{:href => "/profile"} Profile
+          %li
+            %a{:href => "/settings"} Settings
+          %li
+            %a{:href => "/trash"} Trash
+          %li.divider{:role => "separator"}
+          %li
+            %a{:href => "/logout"} Logout
