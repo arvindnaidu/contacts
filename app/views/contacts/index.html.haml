@@ -4,7 +4,7 @@
   - @contacts.each do |contact|
     %li.media.contact-card.list-view.mgt-0.pdt-10
       .media-left
-        %a{:href => ""}
+        %a{:href => contact_path(contact.id)}
           %img.media-object{:alt => "...", :src => image_path("avatar_#{contact.gender ? 'male' : 'female'}.png"), :width => "80px"}
       .media-body
         .row.mgl-0

@@ -1,0 +1,48 @@
+%h4.title-label Settings
+%hr
+%form.form-horizontal{:role => "form"}
+  .form-group
+    %label.control-label.col-md-2{:for => "name"} Name:
+    .col-md-6
+      .form-control= @contact.name
+  .form-group
+    %label.control-label.col-md-2{:for => "email"} Email:
+    .col-md-6
+      .form-control= @contact.email
+  .form-group
+    %label.control-label.col-md-2{:for => "mobile"} Mobile:
+    .col-md-6
+      .form-control= @contact.mobile
+  .form-group
+    %label.control-label.col-md-2{:for => "dob"} Date of Birth:
+    .col-md-6
+      .form-control= @contact.dob
+  .form-group
+    %label.control-label.col-md-2{:for => "gender"} Gender:
+    .col-md-6
+      .form-control= @contact.gender ? 'Male' : 'Female'
+
+  %h4.title-label Address
+  %hr
+  .form-group
+    %label.control-label.col-md-2{:for => "city"} City:
+    .col-md-6
+      .form-control= @contact.city
+  .form-group
+    %label.control-label.col-md-2{:for => "state"} State:
+    .col-md-6
+      .form-control= @contact.state
+  .form-group
+    %label.control-label.col-md-2{:for => "country"} Country:
+    .col-md-6
+      .form-control= @contact.country
+  .form-group
+    %label.control-label.col-md-2{:for => "zip"} Zip:
+    .col-md-6
+      .form-control= @contact.zip
+  %hr
+  .form-group
+    .col-md-offset-2.col-md-10
+      %a.btn.btn-default.edit{:href => edit_contact_path(@contact)} Edit
+      &nbsp;
+      %a.btn.btn-default.delete Delete
