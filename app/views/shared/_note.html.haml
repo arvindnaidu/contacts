@@ -1,0 +1,10 @@
+.row.note-entry.flow{:class => note.color}
+  .col-md-1.talign-c
+    .form-group
+      %input.select-box{:type => "checkbox", :value => "remember-me", "data-noteId" => note.id}
+  .col-md-9
+    %textarea.form-control.update-note.hidden{:rows => "2", :placeholder => note.content, "data-href" => update_note_path(contact, note)}
+      = note.content
+    .note.clickable= note.content
+  .col-md-2
+    .date Jan 21, 2016

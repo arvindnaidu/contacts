@@ -21,6 +21,16 @@ Rails.application.routes.draw do
   get '/profile' => 'home#profile', as: :profile
   get '/trash' => 'home#trash', as: :trash
 
+  get '/contacts/:contact_id/notes' => 'contacts#notes', as: :contact_notes
+  post '/contacts/:contact_id/notes' => 'contacts#create_note', as: :create_note
+  put '/contacts/:contact_id/notes/:id' => 'contacts#update_note', as: :update_note
+  delete '/contacts/:contact_id/notes' => 'contacts#delete_notes', as: :delete_notes
+
+  get '/contacts/:contact_id/reminders' => 'contacts#reminders', as: :contact_reminders
+  post '/contacts/:contact_id/reminders' => 'contacts#create_reminder', as: :create_reminder
+  put '/contacts/:contact_id/reminders/:id' => 'contacts#update_reminder', as: :update_reminder
+  delete '/contacts/:contact_id/reminders' => 'contacts#delete_reminders', as: :delete_reminders
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

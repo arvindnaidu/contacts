@@ -1,21 +1,42 @@
-%h4.title-label Notes
-%hr
-.panel-group
-  .panel.panel-default
-    .panel-heading Panel with panel-default class
-    .panel-body Panel Content
-  .panel.panel-primary
-    .panel-heading Panel with panel-primary class
-    .panel-body Panel Content
-  .panel.panel-success
-    .panel-heading Panel with panel-success class
-    .panel-body Panel Content
-  .panel.panel-info
-    .panel-heading Panel with panel-info class
-    .panel-body Panel Content
-  .panel.panel-warning
-    .panel-heading Panel with panel-warning class
-    .panel-body Panel Content
-  .panel.panel-danger
-    .panel-heading Panel with panel-danger class
-    .panel-body Panel Content
+.note-search-box.notes.row.mgb-30
+  .col-md-4
+    %button.btn.btn-primary.show-new-note-entry New
+    %button.btn.btn-primary.delete-note Delete
+  .input-group.col-md-8
+    %input.form-control{:placeholder => "Search for notes...", :type => "text"}
+      %span.input-group-btn
+        %button.btn.btn-default{:type => "button"} Go!
+
+.new-note-entry-box.row.mgb-30.hidden
+  .form-group
+    %label{:for => "comment"}
+      %h4 Enter note:
+    %textarea#comment.form-control.note-text{:rows => "2"}
+  .form-group
+    .col-md-9#colors-box
+      %span.float-left.title-label Choose a color for note: &nbsp;
+      .color-box.black{"data-color" => 'black'}
+      .color-box.brown{"data-color" => 'brown'}
+      .color-box.chocolate{"data-color" => 'chocolate'}
+      .color-box.corn-flower-blue{"data-color" => 'corn-flower-blue'}
+      .color-box.crimson{"data-color" => 'crimson'}
+      .color-box.dark-cyan{"data-color" => 'dark-cyan'}
+      .color-box.dark-magenta{"data-color" => 'dark-magenta'}
+      .color-box.deep-pink{"data-color" => 'deep-pink'}
+    .col-md-3.controls
+      %a.btn.btn-default.save-new-note{:href => create_note_path(@contact.id)} Save
+      &nbsp;
+      %a.btn.btn-default.cancel-new-note Cancel
+
+.notes-container-wrapper.mgb-10
+  .row.note-entry.flow.head
+    .col-md-1.talign-c
+      .form-group.mgt-10
+        %input.select-all-notes{:type => "checkbox", :value => "remember-me"}
+    .col-md-9
+      .mgt-10 Note
+    .col-md-2
+      .date.mgt-10 Date
+  .notes-container
+    - @notes.each do |note|
+      = render 'shared/note', note: note, contact: @contact

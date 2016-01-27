@@ -10,10 +10,12 @@
       .key-value= @contact.email
     .entry
       %strong.key-name Notes:
-      %span.key-value 10
+      %span.key-value= @notes.count
     .entry
       %strong.key-name Reminders:
       %span.key-value 5
+  .col-md-offset-4.col-md-3.pdt-40
+    %img.media-object{:alt => "...", :src => image_path("avatar_#{@contact.gender ? 'male' : 'female'}.png"), :width => "150px"}
 
 
 = render 'profile_tabs'
@@ -36,11 +38,6 @@
       This alert needs your attention, but it's not super important.<br/>
       This alert needs your attention, but it's not super important.
       This alert needs your attention, but it's not super important.
-
-  .spotlight.info.talign-c{:role => 'alert'}
-    %h4 Create new note!
-    .content
-      %a.btn.btn-primary{:href => new_contact_path} Create
 
   .spotlight.info.talign-c{:role => 'alert'}
     %h4 Create new reminder!

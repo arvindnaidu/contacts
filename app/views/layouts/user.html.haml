@@ -6,7 +6,7 @@
     %title My Contacts
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-  %body
+  %body{:id => @page_body_id || "default_page_id"}
     .row.body-layout-container.mglr-0
       .top-alerts-container.hidden
         = render 'shared/top_alert'
