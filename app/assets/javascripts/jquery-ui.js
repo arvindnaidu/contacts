@@ -8082,6 +8082,7 @@ function Datepicker() {
 		gotoCurrent: false, // True if today link goes back to current selection instead
 		changeMonth: false, // True if month can be selected directly, false if only prev/next
 		changeYear: false, // True if year can be selected directly, false if only prev/next
+    useMonthOnlyHeader: false,
 		yearRange: "c-10:c+10", // Range of years to display in drop-down,
 			// either relative to today's year (-nn:+nn), relative to currently displayed year
 			// (c-nn:c+nn), absolute (nnnn:nnnn), or a combination of the above (nnnn:-n)
@@ -8507,6 +8508,12 @@ $.extend(Datepicker.prototype, {
 					this._enableDatepicker(target);
 				}
 			}
+      // custom code start
+      var originalDate = $(target).attr('value');
+      if(date === null && originalDate != "")
+        date = new Date(originalDate);
+      //custom code end
+
 			this._attachments($(target), inst);
 			this._autoSize(inst);
 			this._setDate(inst, date);
@@ -9789,6 +9796,7 @@ $.extend(Datepicker.prototype, {
 			changeMonth = this._get(inst, "changeMonth"),
 			changeYear = this._get(inst, "changeYear"),
 			showMonthAfterYear = this._get(inst, "showMonthAfterYear"),
+      useMonthOnlyHeader = this._get(inst, "useMonthOnlyHeader"),
 			html = "<div class='ui-datepicker-title'>",
 			monthHtml = "";
 
@@ -9814,41 +9822,43 @@ $.extend(Datepicker.prototype, {
 		}
 
 		// year selection
-		if ( !inst.yearshtml ) {
-			inst.yearshtml = "";
-			if (secondary || !changeYear) {
-				html += "<span class='ui-datepicker-year'>" + drawYear + "</span>";
-			} else {
-				// determine range of years to display
-				years = this._get(inst, "yearRange").split(":");
-				thisYear = new Date().getFullYear();
-				determineYear = function(value) {
-					var year = (value.match(/c[+\-].*/) ? drawYear + parseInt(value.substring(1), 10) :
-						(value.match(/[+\-].*/) ? thisYear + parseInt(value, 10) :
-						parseInt(value, 10)));
-					return (isNaN(year) ? thisYear : year);
-				};
-				year = determineYear(years[0]);
-				endYear = Math.max(year, determineYear(years[1] || ""));
-				year = (minDate ? Math.max(year, minDate.getFullYear()) : year);
-				endYear = (maxDate ? Math.min(endYear, maxDate.getFullYear()) : endYear);
-				inst.yearshtml += "<select class='ui-datepicker-year' data-handler='selectYear' data-event='change'>";
-				for (; year <= endYear; year++) {
-					inst.yearshtml += "<option value='" + year + "'" +
-						(year === drawYear ? " selected='selected'" : "") +
-						">" + year + "</option>";
-				}
-				inst.yearshtml += "</select>";
+    if(!useMonthOnlyHeader){
+  		if ( !inst.yearshtml ) {
+  			inst.yearshtml = "";
+  			if (secondary || !changeYear) {
+  				html += "<span class='ui-datepicker-year'>" + drawYear + "</span>";
+  			} else {
+  				// determine range of years to display
+  				years = this._get(inst, "yearRange").split(":");
+  				thisYear = new Date().getFullYear();
+  				determineYear = function(value) {
+  					var year = (value.match(/c[+\-].*/) ? drawYear + parseInt(value.substring(1), 10) :
+  						(value.match(/[+\-].*/) ? thisYear + parseInt(value, 10) :
+  						parseInt(value, 10)));
+  					return (isNaN(year) ? thisYear : year);
+  				};
+  				year = determineYear(years[0]);
+  				endYear = Math.max(year, determineYear(years[1] || ""));
+  				year = (minDate ? Math.max(year, minDate.getFullYear()) : year);
+  				endYear = (maxDate ? Math.min(endYear, maxDate.getFullYear()) : endYear);
+  				inst.yearshtml += "<select class='ui-datepicker-year' data-handler='selectYear' data-event='change'>";
+  				for (; year <= endYear; year++) {
+  					inst.yearshtml += "<option value='" + year + "'" +
+  						(year === drawYear ? " selected='selected'" : "") +
+  						">" + year + "</option>";
+  				}
+  				inst.yearshtml += "</select>";
 
-				html += inst.yearshtml;
-				inst.yearshtml = null;
-			}
-		}
+  				html += inst.yearshtml;
+  				inst.yearshtml = null;
+  			}
+  		}
 
-		html += this._get(inst, "yearSuffix");
-		if (showMonthAfterYear) {
-			html += (secondary || !(changeMonth && changeYear) ? "&#xa0;" : "") + monthHtml;
-		}
+  		html += this._get(inst, "yearSuffix");
+  		if (showMonthAfterYear) {
+  			html += (secondary || !(changeMonth && changeYear) ? "&#xa0;" : "") + monthHtml;
+  		}
+    }
 		html += "</div>"; // Close datepicker_header
 		return html;
 	},
